@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="squid-theme">
+     <div class="shape-container">
+    <div class="shape circle" style="--x: 0.2; --y: 0.3; --size: 0.5; --speed: 1; --delay: 0;"></div>
+    <div class="shape circle" style="--x: 0.8; --y: 0.1; --size: 0.7; --speed: 1.5; --delay: 0.5;"></div>
+    <div class="shape triangle" style="--x: 0.5; --y: 0.4; --size: 0.6; --speed: 1; --delay: 0.2;"></div>
+    <div class="shape square" style="--x: 0.3; --y: 0.8; --size: 0.8; --speed: 0.8; --delay: 1;"></div>
+    <div class="shape triangle" style="--x: 0.7; --y: 0.5; --size: 0.4; --speed: 1.2; --delay: 0.3;"></div>
+</div>
+    <div class="form-container">
+        <h2>Signup</h2>
+        <form id="signup-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="KhushwantSinghMahajan" required>
+
+            <label for="email">Email (College):</label>
+            <input type="email" id="email" name="email" placeholder="example@sggs.ac.in" pattern=".*@sggs\.ac\.in" required>
+
+             <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="XXXXXXXXXX" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="password">Create Password:</label>
+            <input type="password" id="password" name="password" placeholder="********" required>
+
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="********" required>
+
+           
+            <button type="submit" class="btn-pink">Signup</button>
+        </form>
+        <p>Already have an account? <a href="login.html" class="link-green">Login</a></p>
+    </div>
+    <script>
+         document.getElementById('signup-form').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match. Please try again.");
+            } else {
+                alert("Signup Successful!");
+            }
+        });
+    </script>
+</body>
+</html>
