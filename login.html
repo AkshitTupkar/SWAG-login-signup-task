@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="squid-theme">
+    <div class="shape-container">
+    <div class="shape circle" style="--x: 0.2; --y: 0.3; --size: 0.5; --speed: 1; --delay: 0;"></div>
+    <div class="shape circle" style="--x: 0.8; --y: 0.1; --size: 0.7; --speed: 1.5; --delay: 0.5;"></div>
+    <div class="shape triangle" style="--x: 0.5; --y: 0.4; --size: 0.6; --speed: 1; --delay: 0.2;"></div>
+    <div class="shape square" style="--x: 0.3; --y: 0.8; --size: 0.8; --speed: 0.8; --delay: 1;"></div>
+    <div class="shape triangle" style="--x: 0.7; --y: 0.5; --size: 0.4; --speed: 1.2; --delay: 0.3;"></div>
+</div>
+    <div class="form-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="login-email">Email (College):</label>
+            <input type="email" id="login-email" name="login-email" pattern=".*@sggs\.ac\.in" required>
+
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" name="login-password" required>
+
+            <button type="submit" class="btn-pink">Login</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Login Successful!');
+        });
+    </script>
+</body>
+</html>
